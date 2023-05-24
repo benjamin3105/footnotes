@@ -1,3 +1,3 @@
-# footnotes
+# Footnotes
 
-## Footnotes by Benjamin el Barakat
+### Footnotes by Benjamin el Barakat
