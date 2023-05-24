@@ -2,6 +2,6 @@
 
 ### Footnotes by Benjamin el Barakat
 
-Video uitleg
+#### Video
 
-[Link Text](video/video.mp4)
+[Video met uitleg/demo](video/video.mp4)
