@@ -1,0 +1,53 @@
+#results {
+    overflow-x: hidden;
+    max-width: 700px;
+    min-width: 500px;
+    border: 1px #dcdcde solid;
+    margin: 0 0 24px 0;
+    background: #fff;
+    overflow: auto;
+    max-height: 290px;
+}
+#results ul {
+    margin: 0;
+}
+#results ul li {
+    clear: both;
+    margin-bottom: 0;
+    border-bottom: 1px solid #f0f0f1;
+    color: #2c3338;
+    line-height: 2;
+    cursor: pointer;
+    position: relative;
+}
+#results ul li:nth-child(2n+1) {
+    background-color: #f6f7f7;
+}
+#results ul li:hover {
+    background: #f0f6fc;
+    color: #101517;
+}
+#results ul li span {
+    padding: 4px 4px 4px 8px;
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+}
+#results ul li .fn-id {
+    width: 20px;
+    line-height: 2;
+    font-weight: bold;
+    color: #1890ff;
+    border-right: 1px solid #f6f7f7;
+}
+#results ul li .fn-post-id {
+    padding: 4px;
+    margin-right: 4px;
+    width: 50px;
+    line-height: 2;
+    font-weight: normal;
+    border-right: 1px solid #f6f7f7;
+}
+#searchInput {
+    max-width: 100%;
+}
