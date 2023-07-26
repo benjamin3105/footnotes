@@ -1,7 +1,8 @@
 (function(){
 
     var customPostTypes = mytinymceplugin_vars.custom_post_types; // load data from footnotes.php
-
+    console.log(customPostTypes)
+    
     tinymce.create('tinymce.plugins.MyPluginName', {
         init: function(ed, url){      
 
@@ -27,9 +28,15 @@
                 inputField.value = id;
                 }
 
-                const ids = inputField.value.split(','); // split the input value into an array of IDs
-                ids.sort(); // sort the array of IDs
-                inputField.value = ids.join(','); // join the sorted array of IDs into a comma-separated string and set it as the new value of the input field
+                // const ids = inputField.value.split(','); // split the input value into an array of IDs
+                // ids.sort(); // sort the array of IDs
+                // inputField.value = ids.join(','); // join the sorted array of IDs into a comma-separated string and set it as the new value of the input field
+
+                const ids = inputField.value.split(','); // Split the input value into an array of IDs
+                const uniqueIds = [...new Set(ids)]; // Remove duplicates using Set
+                uniqueIds.sort(); // Sort the array of unique IDs
+                inputField.value = uniqueIds.join(','); // Join the sorted array of unique IDs into a comma-separated string and set it as the new value of the input field
+
                     
             }
         };
@@ -37,9 +44,9 @@
         var resultsItems = []
 
         var data = customPostTypes;
-
+        // data-id="+ d.id +"
         var footnotes = data.map(function(d) {
-            return "<li data-id="+ d.id +" data-post-id="+ d.postid +"><span class=\"fn-id\">"+ d.id +"</span><b class=\"fn-post-id\">"+ d.postid +"</b>" + d.title + "</li>";
+            return "<li  data-post-id="+ d.postid +"><span class=\"fn-id\">"+ d.id +"</span><b class=\"fn-post-id\">"+ d.postid +"</b>" + d.title + "</li>";
         });
 
         var footnotesClean = data.map(function(d) {

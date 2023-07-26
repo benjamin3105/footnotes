@@ -34,7 +34,8 @@
     font-size: 12px;
 }
 #results ul li .fn-id {
-    width: 20px;
+    pointer-events: none;
+    width: 180px;
     line-height: 2;
     font-weight: bold;
     color: #1890ff;
